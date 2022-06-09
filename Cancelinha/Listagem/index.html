@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <br><br><br><br><br><br>
+            <div class="col-md-12">
+                <h4 align="center">Listagem de Produtos</h4>
+
+                <div class="table-responsive">
+                    <a href="../Cadastro/index.html"><button type="button" class="btn btn-primary">Cadastrar Produtos</button></a><br><br>
+
+                    <table id="mytable" class="table table-bordred table-striped">
+
+                        <thead>
+
+                            <th>Número Ordem</th>
+                            <th>Razão Social</th>
+                            <th>Visualizar</th>
+                            <th>Excluir</th>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+
+                                <td>1</td>
+                                <td>Empresa X</td>
+                                <td>
+                                    <p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
+                                            data-target="#edit" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-eye-open"></span></button></p>
+                                </td>
+                                <td>
+                                    <p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal"
+                                            data-target="#delete" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-trash"></span></button></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>2</td>
+                                <td>Empresa Y</td>
+                                <td>
+                                    <p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
+                                            data-target="#edit" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-eye-open"></span></button></p>
+                                </td>
+                                <td>
+                                    <p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal"
+                                            data-target="#delete" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-trash"></span></button></p>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+
+                                <td>3</td>
+                                <td>Empresa Z</td>
+                                <td>
+                                    <p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
+                                            data-target="#edit" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-eye-open"></span></button></p>
+                                </td>
+                                <td>
+                                    <p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal"
+                                            data-target="#delete" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-trash"></span></button></p>
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+
+                                <td>4</td>
+                                <td>Empresa T</td>
+                                <td>
+                                    <p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
+                                            data-target="#edit" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-eye-open"></span></button></p>
+                                </td>
+                                <td>
+                                    <p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal"
+                                            data-target="#delete" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-trash"></span></button></p>
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+
+                                <td>5</td>
+                                <td>Empresa J</td>
+                                <td>
+                                    <p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
+                                            data-target="#edit" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-eye-open"></span></button></p>
+                                </td>
+                                <td>
+                                    <p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal"
+                                            data-target="#delete" data-placement="top" rel="tooltip"><span
+                                                class="glyphicon glyphicon-trash"></span></button></p>
+                                </td>
+                            </tr>
+
+
+
+
+
+
+                        </tbody>
+
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title custom_align" id="Heading">Visualizar Cadastro de Empresa</h4>
+                    </div>
+                    <h4 align="right">Nº de ordem <input type="text" name="numOrdem"
+                            value="<?php echo getNumOrdem(); ?>" size=10 readonly /></h4>
+
+                    <h4 align="center">TERMO DE ADESÃO – PROJETO CIAPE UNIPAR/ACIC</h4>
+
+                    <p> Informações Gerais: o questionário destina-se exclusivamente a obtenção de
+                        informações das empresas participantes do projeto CIAPE – UNIPAR/ACIC. Tem por
+                        finalidade criar indicadores que permitirão comparar a evolução das empresas ao longo
+                        do processo. As informações deverão ser fornecidas pelo proprietário, considerando
+                        a real situação da empresa. Não será divulgado nenhum tipo de informações contidas neste
+                        documento.</p>
+
+                    <legend>1. DADOS CADASTRAIS</legend> <br>
+
+                    <label>Razão Social:</label><input type="text" name="e_razaoSocial"
+                        value="<?php echo getE_razaoSocial(); ?>" size=85 readonly><br><br>
+
+                    <label>Nome Fantasia:</label><input type="text" name="e_nomeFantasia"
+                        value="<?php echo getE_nomeFantasia(); ?>" size=85 readonly><br><br>
+
+                    <label>IE:</label><input type="text" name="e_ie" value="<?php echo getE_ie(); ?>" size=30
+                        readonly><br><br>
+
+                    <label>CNPJ:</label><input type="text" name="e_cnpj" value="<?php echo getE_cnpj(); ?>" size=30
+                        readonly><br><br>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span
+                                class="glyphicon glyphicon-ok-sign"></span> Update</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+
+
+        <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="alert alert-warning"><span class="glyphicon glyphicon-warning-sign"></span> Are you
+                            sure you want to delete this Record?</div>
+
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-warning"><span
+                                class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                        <button type="button" class="btn btn-warning"><span
+                                class="glyphicon glyphicon-remove"></span> No</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+</body>
+
+</html>
